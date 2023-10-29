@@ -28,6 +28,8 @@ if [ "$(which git-lfs | wc -l )" -eq 0 ]; then
     exit 1
 fi
 
+cd ubuntu || { echo "Failed to find ubuntu directory"; exit 1; }
+
 if [ -z "${SKIP_DOWNLOAD}" ]; then
     echo "Grabbing the Kanidm releases url"
     RELEASE_URL="$(curl -qs https://api.github.com/repos/kanidm/kanidm/releases | jq '.[] | select(.tag_name=="debs") | .assets_url')"

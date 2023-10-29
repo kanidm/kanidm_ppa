@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Sun, 29 Oct 2023 01:50:06 +0000
+MD5Sum:
+ 8884637994a339e496ff603235d9aa07             1045 Packages
+ 52dffa523c1beb166c364787d21f5645              522 Packages.gz
+ 82d469bb1a9af7b22c8ad3e5f6fb0260               38 Release
+SHA1:
+ e3fae08cfed5fe03bd680d3d2ff3093ee86ac410             1045 Packages
+ eacfa0d23e353cfd13d7aa07e307cb14b41d49f1              522 Packages.gz
+ 0759532e4c4d5a2ee7866efd67014895a771a113               38 Release
+SHA256:
+ 4f596f24ee424ec258d03d4b618f5363fd5faf704668513dbd48e60663204f9e             1045 Packages
+ 1f73f55f0eab9ecf996442d5b932e6ac9356fdd75960c21cc1711b9602acb295              522 Packages.gz
+ 1017636c18832ad58a4173669cfb238bd774784629e8309a48a8ca0b5c1f66c6               38 Release
+SHA512:
+ d6fb61067c1aef1bcb0687eabdc22a6af424a300cfb609d2fe50a3e230f76b5ad1543cf2bb6940de6d7abe57a8527af67742efb88a0743c44da983f1f3fe2e2d             1045 Packages
+ 98d61731be7c9b0a464187e6d0b6b96d09b0283d72a1a331daf8021c55c3fc5a3319119849076c7b2183071286ecbc24161e2fe2653cf330ed84e3b0db3d2a55              522 Packages.gz
+ e1ac6c2ef8e82ab6701cbdfbbaf373fc899d3fc7bc7db7be6df1b3fd9649d144aa2c2c9a97b56b8744656ea7de8d6cc6d082319ebddf45593869a5f120234677               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEZBoeZanjFdbe0C5u7YxU4PcCzE4FAmU9uk4ACgkQ7YxU4PcC
+zE5RxBAAv+dRr9p2Cbqzz11pyvjjkUYBQXpykhpn6Uhid8jox5JFKOmf+MfoiS5A
+QxvBo+PsINroQ8RAMQzGapy0Tn7nBTZb4tFKl3RIGjNOOuNpMDbMH1ugDjYskwo6
+RvgfOSiO0PW+xfV01WzxgXvJ2Cqagt4b5nbEfaC9uFKzTfk9yVOksa0mBEmOgI1d
+PCGQsyh3KcYGGlSn7ZZ/7cqgXeEUG6hiVEKqqrq+3ULsHgUufEOb4OuoHopqYoGT
+vqhCJR8bXJhzJb+kUhTn0jVF2uikCKKGFDkuKWdmsyOzp8UN4QJyT6NJqNP37hzv
+sE1u2FH1h/HCu7LIRhf4o8gyq0Ox+j/fkWXTpNr8L9dw70d331Y6MPFw0MArBylf
+Dadx47iIOvGPfzJgceYSlBMffTdvM8ioA5H+Gl4v4r5WEePfAcCfghjNJP+NevGc
+SNu2Rw6R4y61Pge4arBIn32u+r8Bxtp9RmTPyXrcM7J5F1YWH462cOhtdT2Vx6nb
+9XlHnJs+61iRgFyn6TR073zH8Lhhhz2c25D2RPlayk/hqyqFM3DoIpsOEVaPv2i8
+SgfxmWjto+dNuxKlgC6H8vupMLS+AOdLRV6FuxjNFnNn/dMKeb59EdmnNxSNZ2Yx
+60oaupHESBEU3i78pfFNfoihfqLV60ii1i7/pspfnP7/UmRk3yI=
+=s5G1
+-----END PGP SIGNATURE-----
