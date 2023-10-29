@@ -7,3 +7,8 @@ help:
 container: ## Run the ubuntu container for testing locally
 container:
 	docker run --rm -it --mount "type=bind,source=$(PWD),target=/ppa" ubuntu
+
+.PHONY: run_workflow
+run_workflow: ## Run the github actions workflow
+run_workflow:
+	gh workflow run  update_ppa.yml && sleep 5 && gh run list
