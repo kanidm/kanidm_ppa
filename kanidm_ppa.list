@@ -1,1 +1,1 @@
-deb [signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.gpg] https://kanidm.github.io/kanidm_ppa ./
+deb [signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.gpg] https://kanidm.github.io/kanidm_ppa/ubuntu ./
