@@ -40,7 +40,7 @@ if [ -z "${SKIP_DOWNLOAD}" ]; then
     fi
 
     echo "Downloading files from ${RELEASE_URL}"
-    curl -qfs https://api.github.com/repos/kanidm/kanidm/releases/127032542/assets | jq '.[] | .browser_download_url' | xargs -n1 curl -Lf -O
+    curl -qfs "${RELEASE_URL}" | jq '.[] | .browser_download_url' | xargs -n1 curl -Lf -O
 else
     echo "Skipping download..."
 fi
