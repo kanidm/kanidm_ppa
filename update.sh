@@ -32,7 +32,7 @@ cd ubuntu || exit 1
 
 if [ -z "${SKIP_DOWNLOAD}" ]; then
     echo "Grabbing the Kanidm releases url"
-    RELEASE_URL="$(curl -qs https://api.github.com/repos/kanidm/kanidm/releases | jq '.[] | select(.tag_name=="debs") | .assets_url')"
+    RELEASE_URL="$(curl -Lqs https://api.github.com/repos/kanidm/kanidm/releases | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
 
     if [ -z "${RELEASE_URL}" ]; then
         echo "Failed to get release url"
@@ -40,7 +40,7 @@ if [ -z "${SKIP_DOWNLOAD}" ]; then
     fi
 
     echo "Downloading files from ${RELEASE_URL}"
-    curl -qfs "${RELEASE_URL}" | jq '.[] | .browser_download_url' | xargs -n1 curl -Lf -O
+    curl -L "$RELEASE_URL" | jq '.[] | .browser_download_url' | xargs -n1 ../download.sh
 else
     echo "Skipping download..."
 fi
