@@ -9,8 +9,12 @@ if [ -z "${GPG_KEY_ID}" ]; then
 fi
 
 if [ "$(gpg --list-keys | grep -c "${GPG_KEY_ID}")" -ne 1 ]; then
-    echo "Don't have GPG key ${GPG_KEY_ID}, can't continue!"
-    exit 1
+    find . -name '*.gpg' -exec gpg --import {} \;
+    find . -name '*.asc' -exec gpg --import {} \;
+    if [ "$(gpg --list-keys | grep -c "${GPG_KEY_ID}")" -ne 1 ]; then
+        echo "Don't have GPG key ${GPG_KEY_ID}, can't continue!"
+        exit 1
+    fi
 fi
 
 if [ "$(which jq | wc -l )" -eq 0 ]; then
