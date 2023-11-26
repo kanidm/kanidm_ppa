@@ -8,6 +8,11 @@ if [ -z "${GPG_KEY_ID}" ]; then
     exit 1
 fi
 
+if [ "$(which gpg | wc -l )" -eq 0 ]; then
+    echo "gpg not found, please install gpg"
+    exit 1
+fi
+
 if [ "$(gpg --list-keys | grep -c "${GPG_KEY_ID}")" -ne 1 ]; then
     find . -name '*.gpg' -exec gpg --import {} \;
     find . -name '*.asc' -exec gpg --import {} \;
