@@ -1,7 +1,10 @@
 #!/bin/bash
-
-set -e
 # Pulls the latest release files
+
+set -o pipefail
+
+# Override to test with a fork
+REPO=${REPO:-kanidm/kanidm}
 
 if [ -z "${GPG_KEY_ID}" ]; then
     echo "Ensure the GPG_KEY_ID environment variable is set!"
@@ -37,34 +40,46 @@ if [ "$(which git-lfs | wc -l )" -eq 0 ]; then
     exit 1
 fi
 
-cd ubuntu || exit 1
-
-if [ -z "${SKIP_DOWNLOAD}" ]; then
-    echo "Grabbing the Kanidm releases url"
-    RELEASE_URL="$(curl -Lqs https://api.github.com/repos/kanidm/kanidm/releases | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
-
-    if [ -z "${RELEASE_URL}" ]; then
-        echo "Failed to get release url"
-        exit 1
+for distro in ubuntu debian; do
+    cd "$distro" || exit 1
+    
+    if [ -z "${SKIP_DOWNLOAD}" ]; then
+        echo "Grabbing the Kanidm releases url"
+        RELEASE_URL="$(curl -qLs https://api.github.com/repos/${REPO}/releases | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
+    
+        if [ -z "${RELEASE_URL}" ]; then
+            echo "Failed to get release url"
+            exit 1
+        fi
+    
+        echo "Fetching release info from ${RELEASE_URL}"
+	urls=($(curl -qLs "$RELEASE_URL" | jq '.[] | .browser_download_url' | grep -i "$distro" | tr -d \"))
+        if [ $? -ne 0 ]; then
+            echo "Release doesn't have any files for $distro"
+            exit 1
+	else
+	    echo "Release has ${#urls[@]} files for $distro"
+        fi
+	for url in "${urls[@]}"; do
+	    ../download.sh "$url" || exit 1
+	done
+    else
+        echo "Skipping download..."
     fi
-
-    echo "Downloading files from ${RELEASE_URL}"
-    curl -L "$RELEASE_URL" | jq '.[] | .browser_download_url' | xargs -n1 ../download.sh
-else
-    echo "Skipping download..."
-fi
-
-echo "Running dpkg-scanpackages"
-dpkg-scanpackages --multiversion . > Packages
-
-echo "Compressing Packages"
-gzip -k -f Packages
-
-echo "Generating release file"
-apt-ftparchive release . > Release
-
-echo "Signing release file"
-gpg --default-key "${GPG_KEY_ID}" -abs -o - Release > Release.gpg
-gpg --default-key "${GPG_KEY_ID}" --clearsign -o - Release > InRelease
-
-echo "Done!"
+    
+    echo "Running dpkg-scanpackages"
+    dpkg-scanpackages --multiversion . > Packages
+    
+    echo "Compressing Packages"
+    gzip -k -f Packages
+    
+    echo "Generating release file"
+    apt-ftparchive release . > Release
+    
+    echo "Signing release file"
+    gpg --default-key "${GPG_KEY_ID}" -abs -o - Release > Release.gpg
+    gpg --default-key "${GPG_KEY_ID}" --clearsign -o - Release > InRelease
+    
+    echo "Done with $distro!"
+    cd ..
+done

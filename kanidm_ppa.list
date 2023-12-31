@@ -1,1 +1,3 @@
+# Choose one of the below. The documented install oneliners grep for the correct one.
 deb [signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.gpg] https://kanidm.github.io/kanidm_ppa/ubuntu ./
+deb [signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.gpg] https://kanidm.github.io/kanidm_ppa/debian ./
