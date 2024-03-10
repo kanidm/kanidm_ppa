@@ -568,6 +568,21 @@ Priority: optional
 Homepage: https://kanidm.com
 Description: Kanidm CLI Tooling
 
+Package: kanidm
+Version: 1:1.2.0~dev~202403090619+285f436
+Architecture: amd64
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Installed-Size: 155647
+Filename: ./kanidm_Ubuntu_22.04_1.2.0.dev.202403090619%2B285f436_x86_64.deb
+Size: 26568390
+MD5sum: f221d93b10e90ebf287535c92250b163
+SHA1: 1d15f6ac3250d980ff648808b27bdfdbbe40de52
+SHA256: 3f6fabd0d67e79deac1b0b3ea1969915792c65508b0068b5f7e577dd1d376ea5
+Section: admin
+Priority: optional
+Homepage: https://kanidm.com
+Description: Kanidm CLI Tooling
+
 Package: kanidm-unixd
 Version: 1.1.0-rc.15-dev-202311242357c1f1720
 Architecture: amd64
@@ -1434,6 +1449,22 @@ Size: 66492952
 MD5sum: 0638c47282f93b5bd32a70e56393ab7c
 SHA1: c157b49aa3b44f01266602d81949b5d2fde790f9
 SHA256: 24fc63391d585dd2eb32e49e6bdc301b50e0fbe013861ad40e6374384232f998
+Section: admin
+Priority: optional
+Homepage: https://kanidm.com
+Description: Kanidm Unix Tools
+
+Package: kanidm-unixd
+Version: 1:1.2.0~dev~202403090611+285f436
+Architecture: amd64
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Installed-Size: 351510
+Depends: tpm-udev
+Filename: ./kanidm-unixd_Ubuntu_22.04_1.2.0.dev.202403090611%2B285f436_x86_64.deb
+Size: 66484516
+MD5sum: c9d38427c300d5675ffad5738fb9bd38
+SHA1: 54677c700065014159ba917350f4b7e24c00b6e9
+SHA256: ee601daba25f9d47b51d909a65052749813148279ec85c3e1a743204467af33e
 Section: admin
 Priority: optional
 Homepage: https://kanidm.com
