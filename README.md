@@ -1,34 +1,40 @@
-# Kanidm PPA
+# PPA Packages
 
-This pulls the packages from [the Kanidm debs releases](https://github.com/kanidm/kanidm/releases/tag/debs) and makes a package archive for "nightly" packages. Packages are distributed for the latest LTS versions, Ubuntu 22.04 & Debian 12.
+This pulls the packages from the Kanidm [debs releases](https://github.com/kanidm/kanidm/releases/tag/debs) and makes a package archive for “nightly” packages. Packages are distributed for the latest LTS versions, Ubuntu 22.04 & Debian 12.
+
+Please note that while the commands below should also work on Ubuntu-based distributions, we cannot ensure the PPA compatibility of other distributions. Pop OS for example, would require an altered setup in line with their [instructions](https://support.system76.com/articles/ppa-third-party/).
 
 ## Adding it to your system
 
-The below commands:
-
-1. Sets pipefail so that failures are caught.
-2. Makes sure you have a "trusted GPG" directory.
-3. Downloads the Kanidm PPA GPG public key.
-4. Adds the Kanidm PPA to your local APT configuration, with autodetection of Ubuntu vs. Debian.
-5. Updates your local package cache.
-
-``` shell
+Sets pipefail so that failures are caught.
+```bash
 set -o pipefail
+```
+Makes sure you have a “trusted GPG” directory.
+```bash
 sudo mkdir -p /etc/apt/trusted.gpg.d/
+```
+Downloads the Kanidm PPA GPG public key.
+```bash
 curl -s --compressed "https://kanidm.github.io/kanidm_ppa/KEY.gpg" \
     | gpg --dearmor \
     | sudo tee /etc/apt/trusted.gpg.d/kanidm_ppa.gpg >/dev/null
-
+```
+Adds the Kanidm PPA to your local APT configuration, with autodetection of Ubuntu vs. Debian.
+```bash
 sudo curl -s --compressed "https://kanidm.github.io/kanidm_ppa/kanidm_ppa.list" \
     | grep $( ( . /etc/os-release && echo $ID) ) \
     | sudo tee /etc/apt/sources.list.d/kanidm_ppa.list
+```
+Updates your local package cache.
+```bash
 sudo apt update
 ```
 
-## Listing packages
+## Listing Packages
 
-Use `apt-cache` to list the packages available:
+Use apt-cache to list the packages available:
 
-```shell
+```bash
 apt-cache search kanidm
 ```
