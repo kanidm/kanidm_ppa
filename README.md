@@ -22,7 +22,7 @@ curl -s --compressed "https://kanidm.github.io/kanidm_ppa/KEY.gpg" \
 ```
 Add the Kanidm PPA to your local APT configuration, with autodetection of Ubuntu vs. Debian.
 ```bash
-sudo curl -s --compressed "https://kanidm.github.io/kanidm_ppa/kanidm_ppa.list" \
+curl -s --compressed "https://kanidm.github.io/kanidm_ppa/kanidm_ppa.list" \
     | grep $( ( . /etc/os-release && echo $ID) ) \
     | sudo tee /etc/apt/sources.list.d/kanidm_ppa.list
 ```
