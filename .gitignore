@@ -5,3 +5,4 @@ config.py
 dist/
 .env
 *.asc
+**/__pycache__/**

@@ -42,16 +42,16 @@ fi
 
 for distro in ubuntu debian; do
     cd "$distro" || exit 1
-    
+
     if [ -z "${SKIP_DOWNLOAD}" ]; then
         echo "Grabbing the Kanidm releases url"
         RELEASE_URL="$(curl -qLs https://api.github.com/repos/${REPO}/releases | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
-    
+
         if [ -z "${RELEASE_URL}" ]; then
             echo "Failed to get release url"
             exit 1
         fi
-    
+
         echo "Fetching release info from ${RELEASE_URL}"
 	urls=($(curl -qLs "$RELEASE_URL" | jq '.[] | .browser_download_url' | grep -i "$distro" | tr -d \"))
         if [ $? -ne 0 ]; then
@@ -66,20 +66,23 @@ for distro in ubuntu debian; do
     else
         echo "Skipping download..."
     fi
-    
+
+    echo "Cleaning up files"
+    python dedup_files.py
+
     echo "Running dpkg-scanpackages"
     dpkg-scanpackages --multiversion . > Packages
-    
+
     echo "Compressing Packages"
     gzip -k -f Packages
-    
+
     echo "Generating release file"
     apt-ftparchive release . > Release
-    
+
     echo "Signing release file"
     gpg --default-key "${GPG_KEY_ID}" -abs -o - Release > Release.gpg
     gpg --default-key "${GPG_KEY_ID}" --clearsign -o - Release > InRelease
-    
+
     echo "Done with $distro!"
     cd ..
 done
