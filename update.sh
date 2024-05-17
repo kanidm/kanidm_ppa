@@ -45,7 +45,7 @@ for distro in ubuntu debian; do
 
     if [ -z "${SKIP_DOWNLOAD}" ]; then
         echo "Grabbing the Kanidm releases url"
-        RELEASE_URL="$(curl -qLs https://api.github.com/repos/${REPO}/releases | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
+        RELEASE_URL="$(curl -qLs "https://api.github.com/repos/${REPO}/releases" | jq -r '.[] | select(.tag_name=="debs") | .assets_url')"
 
         if [ -z "${RELEASE_URL}" ]; then
             echo "Failed to get release url"
@@ -53,12 +53,13 @@ for distro in ubuntu debian; do
         fi
 
         echo "Fetching release info from ${RELEASE_URL}"
-	urls=($(curl -qLs "$RELEASE_URL" | jq '.[] | .browser_download_url' | grep -i "$distro" | tr -d \"))
-        if [ $? -ne 0 ]; then
+	urls=()
+    IFS=" " read -r -a urls <<< "$(curl -qLs "$RELEASE_URL" | jq '.[] | .browser_download_url' | grep -i "$distro" | tr -d \")"
+        if [ ${#urls[@]} -eq 0 ]; then
             echo "Release doesn't have any files for $distro"
-            exit 1
-	else
-	    echo "Release has ${#urls[@]} files for $distro"
+            exit
+        else
+            echo "Release has ${#urls[@]} files for $distro"
         fi
 	for url in "${urls[@]}"; do
 	    ../download.sh "$url" || exit 1
