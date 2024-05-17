@@ -69,7 +69,7 @@ for distro in ubuntu debian; do
     fi
 
     echo "Cleaning up files"
-    python dedup_files.py
+    cd ../ && python ../dedup_files.py && cd "$distro" || exit 1
 
     echo "Running dpkg-scanpackages"
     dpkg-scanpackages --multiversion . > Packages
