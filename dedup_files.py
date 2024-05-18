@@ -60,7 +60,7 @@ for basedir in ["ubuntu", "debian"]:
                 meta for meta in metas if meta.package == package and meta.arch == arch
             ]
             # sort the list by datestamp
-            package_metas.sort(key=lambda x: x.datestamp, reverse=True)
+            package_metas.sort(key=lambda x: x.datestamp)
             # remove all but the last ten
             package_metas = package_metas[-10:]
             # only leave the files to be removed
