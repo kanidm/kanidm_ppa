@@ -53,17 +53,19 @@ for distro in ubuntu debian; do
         fi
 
         echo "Fetching release info from ${RELEASE_URL}"
-	urls=()
-    IFS=" " read -r -a urls <<< "$(curl -qLs "$RELEASE_URL" | jq '.[] | .browser_download_url' | grep -i "$distro" | tr -d \")"
+
+        # shellcheck disable=SC2207
+        urls=($(curl -qLs "$RELEASE_URL" | jq -r '.[] | select(.browser_download_url | test("'"$distro"'"; "i")) | .browser_download_url'))
+
         if [ ${#urls[@]} -eq 0 ]; then
             echo "Release doesn't have any files for $distro"
             exit
         else
             echo "Release has ${#urls[@]} files for $distro"
         fi
-	for url in "${urls[@]}"; do
-	    ../download.sh "$url" || exit 1
-	done
+        for url in "${urls[@]}"; do
+            ../download.sh "$url" || exit 1
+        done
     else
         echo "Skipping download..."
     fi
