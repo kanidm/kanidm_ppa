@@ -1,0 +1,7 @@
+Origin: . plucky
+Label: . plucky
+Archive: plucky
+Suite: plucky
+Codename: plucky
+Architecture: arm64
+Component: stable

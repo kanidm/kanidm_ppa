@@ -1,0 +1,176 @@
+Package: kanidm
+Priority: optional
+Section: admin
+Installed-Size: 22576
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.8.0-202511120633+42d0e86
+Depends: libc6, libssl3 | libssl3t64, libudev1
+Filename: pool/plucky/stable/k/kanidm/kanidm_1.8.0-202511120633+42d0e86_arm64.deb
+Size: 5559508
+MD5sum: f16c073c2b96fcaaf6a19ce4f9325ccb
+SHA1: eaf12a055655e9631e10c27648471d36896a8b1f
+SHA256: 71397a8f2a4a8d4cf1b86de2d3fe03c0cb5f364c89aa6ab52c0f42ebcf60041c
+SHA512: ab86904c59893ef0066704b9ce26f74ea05abb21d1edc2bc27f0455f44f0eafec86afffad2f365b6f654cd616205abbf3cc52b76c35ad0b5a400dd1bf4c2ce7d
+Description: Kanidm Client Tools
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidm
+Priority: optional
+Section: admin
+Installed-Size: 24059
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.7.4-202510130121+7f107b6
+Depends: libc6, libssl3 | libssl3t64, libudev1
+Filename: pool/plucky/stable/k/kanidm/kanidm_1.7.4-202510130121+7f107b6_arm64.deb
+Size: 6538472
+MD5sum: d8424045cc8e2889e49b5b23a83e2448
+SHA1: 8c7fda03293fbd7c6d1731d6116c3f53cf6b6ad5
+SHA256: 73476ca7242d3fe4938505650495e037345eb10175f8b58ebde94eb354f0428d
+SHA512: 0ebf549442789732a6c6fcdbc9b5a7e96fb0d152545841a2a55f7ab1b592655a4948b360493168c8b0fb8f498d1e9d54ccd941ec1623942228361bf8af72160d
+Description: Kanidm Client Tools
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidm-unixd
+Priority: optional
+Section: network
+Installed-Size: 22024
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.8.0-202511120633+42d0e86
+Depends: libc6, libnss-kanidm, libpam-kanidm, libssl3 | libssl3t64, tpm-udev
+Filename: pool/plucky/stable/k/kanidm-unixd/kanidm-unixd_1.8.0-202511120633+42d0e86_arm64.deb
+Size: 5016308
+MD5sum: 75114208c4257b052ea9cd618d475a33
+SHA1: 4fd35fa8df3d299f45ca5b39f133e7665be41d06
+SHA256: 013b78d422d7e9e0d8367e329c0824ccb7ce126bedfd3bf378b194edf44687b4
+SHA512: eb966cd72785712f41fa06dc87768596aa0161e93e919d7e2ec53085a70bfeec1085cd56af856abe4fa68642b9ea68632d004c762c9c10cb11147b0d88c99b90
+Description: Kanidm Unix Integration Clients
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidm-unixd
+Priority: optional
+Section: network
+Installed-Size: 27496
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.7.4-202510130121+7f107b6
+Depends: libc6, libnss-kanidm, libpam-kanidm, libssl3 | libssl3t64, tpm-udev
+Filename: pool/plucky/stable/k/kanidm-unixd/kanidm-unixd_1.7.4-202510130121+7f107b6_arm64.deb
+Size: 6232208
+MD5sum: 5cd5f8c369d0d3e51cb3da2e530863ab
+SHA1: 8518b2531ad4f44c1d6d77be76b3307d1304b0e3
+SHA256: b2613a736fd15307c98870b888b199fabf7dc21a91e5f0ad263ed7ee55a8e1a2
+SHA512: 285c0b60efbab877f75e00aca1ac44e732629dccb02f3784f16f88aec0518a9334d8aa487c43c37f2b6d03a8602b1ede5693bcdd9d96c72212a008a9bc2653f2
+Description: Kanidm Unix Integration Clients
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidmd
+Priority: optional
+Section: network
+Installed-Size: 60839
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.8.0-202511120633+42d0e86
+Depends: libc6, libssl3 | libssl3t64, tpm-udev
+Filename: pool/plucky/stable/k/kanidmd/kanidmd_1.8.0-202511120633+42d0e86_arm64.deb
+Size: 13412684
+MD5sum: 09d397761967d3a1eeb6a67ec4f60e28
+SHA1: 0b92b258f9aed741a76ad2e29b53e650e4689d0e
+SHA256: 7e06cafc4e8406202faa6889c80bb7fb30171b71092580ea4cf5b731b76b7c28
+SHA512: 518324e5a3c7d04c834081b0699b2520388d61b7d9c07fcb6a828548b8892345fade2b85a70efcad0643c83ec9f33a20630a8debbf20812f5c277ab85f66f6bd
+Description: Kanidm Server Daemon
+Homepage: https://github.com/kanidm/kanidm/
+
+Package: kanidmd
+Priority: optional
+Section: network
+Installed-Size: 58695
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.7.4-202510130121+7f107b6
+Depends: libc6, libssl3 | libssl3t64, tpm-udev
+Filename: pool/plucky/stable/k/kanidmd/kanidmd_1.7.4-202510130121+7f107b6_arm64.deb
+Size: 13365092
+MD5sum: 52546fe566a5dd60bda404ac84ec6d8f
+SHA1: d45d6e46f148036c23748abf053b975ffb861b49
+SHA256: 2d7c79a3204fa16284cffa00a74e27f734733ed5929a5520c2a368c5b508a5b4
+SHA512: 16d6efee20d336b244c9c8ee973fd279ffa5918d1b782377d2f4b18789047ce42d88d20753e493d7e24491f71c8b90115772ac25f11b12c5a36fce8300a7f3fc
+Description: Kanidm Server Daemon
+Homepage: https://github.com/kanidm/kanidm/
+
+Package: libnss-kanidm
+Priority: optional
+Section: network
+Installed-Size: 14210
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.8.0-202511120633+42d0e86
+Filename: pool/plucky/stable/libn/libnss-kanidm/libnss-kanidm_1.8.0-202511120633+42d0e86_arm64.deb
+Size: 2445616
+MD5sum: 36fa53c440c6cc95384f7f61eaa856d8
+SHA1: 285ae22771b8076de2886d6d011e52fa564e9ea1
+SHA256: 5eef7d270e2b505406aaed2015bb089edc345296ccb0e154dc603a77de320e40
+SHA512: 6a739e86adf6f8da69b6d646758f38e26e0736072d6cd836176116e055dcf30bad7d625c1e7d8149e0d29f1d7d241c3f905c41ef718bf5d23f4277f3637cf108
+Description: Kanidm NSS module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: libnss-kanidm
+Priority: optional
+Section: network
+Installed-Size: 18548
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.7.4-202510130121+7f107b6
+Filename: pool/plucky/stable/libn/libnss-kanidm/libnss-kanidm_1.7.4-202510130121+7f107b6_arm64.deb
+Size: 2774496
+MD5sum: b0c579a64fc67742703041efcc9d9c6d
+SHA1: 633133e4eba4e2750ba4af490691742d497a985a
+SHA256: 59b0a954392eed4dbf46a4c7b58366168a0c8f84f58890133bfc7d5483560450
+SHA512: 5da083465591d5d8d3829356dbca53372f90e2d39faadefe641f5c6f11ce9f7417f23cfe17475324b0f6046585bf23b55f5e7d60791ebd828cc40b48d23dbf05
+Description: Kanidm NSS module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: libpam-kanidm
+Priority: optional
+Section: network
+Installed-Size: 19866
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.8.0-202511120633+42d0e86
+Depends: libc6, libpam0g
+Filename: pool/plucky/stable/libp/libpam-kanidm/libpam-kanidm_1.8.0-202511120633+42d0e86_arm64.deb
+Size: 3468348
+MD5sum: db58cd4b3925b0a11646bc7dc3705861
+SHA1: d50a8a0ae4d8d1b070e8e56f4ef85d9f5c95fc79
+SHA256: 54291bea4489ce3c4d54d25458a4137f1eb6ffaab9f05efc283d658ef6e88ebf
+SHA512: 154fa8c0bce7e8f5be52958397843ab7213334ccdcde6ee028040b74e5cd0460496c9b2d64c67d8e3083b2f710d6d3b1417540d96910330b8c35f34a035333b0
+Description: Kanidm PAM module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: libpam-kanidm
+Priority: optional
+Section: network
+Installed-Size: 23787
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: arm64
+Version: 1.7.4-202510130121+7f107b6
+Depends: libc6, libpam0g
+Filename: pool/plucky/stable/libp/libpam-kanidm/libpam-kanidm_1.7.4-202510130121+7f107b6_arm64.deb
+Size: 3702328
+MD5sum: 23425529e43a65ecf44903ac1a0f9a20
+SHA1: 80b5b99379ea3e4fb22b735515d1929df85409c5
+SHA256: 1cb3c53fa0648666eb6df6089810c5a175e7c0e82e67ab2e86ddb913b8917b0d
+SHA512: e47c8da039de708456d820f3c36d16c1d83e12446e9b01d908ebdd142ce4d9f90013331e6f8cdd5ebe622c02a885638fbe95495d98580746bec95e22ad86cb91
+Description: Kanidm PAM module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
