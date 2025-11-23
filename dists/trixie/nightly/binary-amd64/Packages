@@ -1,0 +1,88 @@
+Package: kanidm
+Priority: optional
+Section: admin
+Installed-Size: 25059
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: amd64
+Version: 1.9.0~dev-202511210641+c4cc89c
+Depends: libc6, libssl3 | libssl3t64, libudev1
+Filename: pool/trixie/nightly/k/kanidm/kanidm_1.9.0~dev-202511210641+c4cc89c_amd64.deb
+Size: 6982208
+MD5sum: cd3f8d3a595b76bdd60874910415567f
+SHA1: 1fdfa6e34ef6045becfb557fd670fe1d62d04a8e
+SHA256: 3cca618377b95df55227cc842cd86ef9469d48365723b64cecf0a466cd82734d
+SHA512: 2d29d955451a7ff3bfb4b5753bc2049b082fbf41632c5afe059f9011c138bb09fe790513eda9f77acb39cb718b6d1ecefa17926827ffcebe6765e6cccc4042bd
+Description: Kanidm Client Tools
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidm-unixd
+Priority: optional
+Section: network
+Installed-Size: 24113
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: amd64
+Version: 1.9.0~dev-202511210641+c4cc89c
+Depends: libc6, libnss-kanidm, libpam-kanidm, libssl3 | libssl3t64, tpm-udev
+Filename: pool/trixie/nightly/k/kanidm-unixd/kanidm-unixd_1.9.0~dev-202511210641+c4cc89c_amd64.deb
+Size: 5682180
+MD5sum: 1b7339e1b69d8a25b48c08078a5eb53a
+SHA1: 8e57795c3539575ae0a164aaa72fdd5194715fe8
+SHA256: 82f7fadbee6444e24bfd1a078f340cb7db6355e0ff5c346c48a6f4a75d36b849
+SHA512: 4abd7d46b5401786fd4868c1fb1b89e8f0e6778dc5009d74219f00574935aeb5fd7d8f9011b89bb744db154c1b4e4e3456c33272f49157d236a169cb4a8753d6
+Description: Kanidm Unix Integration Clients
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: kanidmd
+Priority: optional
+Section: network
+Installed-Size: 68516
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: amd64
+Version: 1.9.0~dev-202511210641+c4cc89c
+Depends: libc6, libssl3 | libssl3t64, tpm-udev
+Filename: pool/trixie/nightly/k/kanidmd/kanidmd_1.9.0~dev-202511210641+c4cc89c_amd64.deb
+Size: 15155212
+MD5sum: 9b72763010bfb46179d68e4fe0b75cfa
+SHA1: 77c540dc656205e12faf32fbda3cf8bed8d6905d
+SHA256: 2cacdcedbf218dc9c9404a63755a36cf4943de387fca9961b0d6d0ad18432a76
+SHA512: 5dca19ee5a39b633d88635b7443c39d59c951ec35e1dacd3655ffcdc7c4026afe7abb5ab6b455fa4951a193acc816e85820567b15d691ee84c94cb17f0acb85d
+Description: Kanidm Server Daemon
+Homepage: https://github.com/kanidm/kanidm/
+
+Package: libnss-kanidm
+Priority: optional
+Section: network
+Installed-Size: 14269
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: amd64
+Version: 1.9.0~dev-202511210641+c4cc89c
+Filename: pool/trixie/nightly/libn/libnss-kanidm/libnss-kanidm_1.9.0~dev-202511210641+c4cc89c_amd64.deb
+Size: 2554028
+MD5sum: 0bea1720df1be2a517e01d103a784513
+SHA1: 29e2b56f145101c727e93435284e9dd0dc719cdc
+SHA256: fef35b805c447a96da886e41a930160d90064ac860227f3be8554fa78ec6b926
+SHA512: a7f7e2ac1987d7e67ecc5e623238f562e3356f04d635c045d583f1d7aaa9b9467f2cfe76c82b503b323b608d9eba4377a81f39ff7fa2d715bc7c515fa55f1099
+Description: Kanidm NSS module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
+Package: libpam-kanidm
+Priority: optional
+Section: network
+Installed-Size: 19886
+Maintainer: James Hodgkinson <james@terminaloutcomes.com>
+Architecture: amd64
+Version: 1.9.0~dev-202511210641+c4cc89c
+Depends: libc6, libpam0g
+Filename: pool/trixie/nightly/libp/libpam-kanidm/libpam-kanidm_1.9.0~dev-202511210641+c4cc89c_amd64.deb
+Size: 3614484
+MD5sum: be131be87e5ed4947587e4ea384fb0a4
+SHA1: fbad4f196d892cb000b78d5b04c16cf62059a49b
+SHA256: 6ec7210ab55b4857d78678e29317c4216261a5ad61e8387bb5591aeefd09a2f6
+SHA512: 4da8ae4b5da7b10bb036217f58701aee0101ec6e56a18fe2e52dc55cf27382349da13fd743545fe37f43ba13194f19144bb639d61acdcb89323bfa1a726da333
+Description: Kanidm PAM module
+Homepage: https://github.com/kanidm/kanidm/
+Multi-Arch: foreign
+
