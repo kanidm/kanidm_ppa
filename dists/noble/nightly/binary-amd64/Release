@@ -1,0 +1,7 @@
+Origin: . noble
+Label: . noble
+Archive: noble
+Suite: noble
+Codename: noble
+Architecture: amd64
+Component: nightly
