@@ -1,0 +1,7 @@
+Origin: . jammy
+Label: . jammy
+Archive: jammy
+Suite: jammy
+Codename: jammy
+Architecture: arm64
+Component: stable

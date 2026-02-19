@@ -1,0 +1,15 @@
+# You probably want to use only one of the examples below!
+# Example for enabling only the stable component on trixie: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa trixie stable
+# Example for enabling only the stable component on bookworm: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa bookworm stable
+# Example for enabling only the stable component on jammy: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa jammy stable
+# Example for enabling only the stable component on noble: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa noble stable
+# Example for enabling only the stable component on questing: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa questing stable
+# Example for enabling only the nightly component on trixie: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa trixie nightly
+# Example for enabling only the nightly component on noble: 
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/kanidm_ppa.asc] https://kanidm.github.io/kanidm_ppa noble nightly
