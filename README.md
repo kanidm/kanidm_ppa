@@ -12,7 +12,7 @@
 - Packages are distributed for current LTS versions of Debian & Ubuntu that natively package the required dependencies;
   - Ubuntu: 22.04 aka `jammy` & 24.04 aka `noble`.
   - Debian 13 aka `bookworm`.
-  - the up-to-date list is in the gihub actions workflow: https://github.com/kanidm/kanidm_ppa_automation/blob/main/.github/workflows/create-apt-repo.yml
+  - the up-to-date list is in the [GitHub Actions Workflow that runs the build]( https://github.com/kanidm/kanidm_ppa_automation/blob/main/.github/workflows/create-apt-repo.yml)
 
 - Please note that while the spirit of the commands below should also work on other Debian-based distributions, the
   codename detection will not work and you will need to manually choose which distribution is the closest to yours. The
