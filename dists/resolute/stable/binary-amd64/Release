@@ -1,0 +1,7 @@
+Origin: . resolute
+Label: . resolute
+Archive: resolute
+Suite: resolute
+Codename: resolute
+Architecture: amd64
+Component: stable
