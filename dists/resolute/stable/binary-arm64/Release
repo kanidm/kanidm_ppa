@@ -1,0 +1,7 @@
+Origin: . resolute
+Label: . resolute
+Archive: resolute
+Suite: resolute
+Codename: resolute
+Architecture: arm64
+Component: stable
