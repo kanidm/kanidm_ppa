@@ -7,11 +7,6 @@
 
 - The Kanidm PPA repository contains Debian & Ubuntu packages built from the
   [main Kanidm repository](https://github.com/kanidm/kanidm).
-- Two separate components are available, `stable` for released versions and `nightly` which only provides the latest
-  bleeding edge, refreshed once a day.
-- Packages are distributed for current LTS versions of Debian & Ubuntu that natively package the required dependencies;
-  - Ubuntu: 22.04 aka `jammy` & 24.04 aka `noble`.
-  - Debian 12 aka `bookworm`.
 
 - Please note that while the spirit of the commands below should also work on other Debian-based distributions, the
   codename detection will not work and you will need to manually choose which distribution is the closest to yours. The
